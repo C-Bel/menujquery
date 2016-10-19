@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="menujquery.css" media="screen" title="no title">
+    <script type="text/javascript">
+    </script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+    <title>menu deroulant</title>
+
+  </head>
+
+  <body>
+<header>
+
+<h1>MENU</h1>
+
+<button class="hamburger">&#9776;</button>
+<button class="cross">&#735;</button>
+</header>
+
+<div class="menu">
+  <ul>
+<a href="#"><li>ACHATS</li></a>
+<a href="#"><li>VENTES</li></a>
+<a href="#"><li>COLLECTIONS</li></a>
+<a href="#"><li>CONTACTS</li></a>
+  </ul>
+</div>
+
+<script>
+$( ".cross" ).hide();
+$( ".menu" ).hide();
+$( ".hamburger" ).click(function() {
+$( ".menu" ).slideToggle( "slow", function() {
+$( ".hamburger" ).hide();
+$( ".cross" ).show();
+});
+});
+
+$( ".cross" ).click(function() {
+$( ".menu" ).slideToggle( "slow", function() {
+$( ".cross" ).hide();
+$( ".hamburger" ).show();
+});
+});
+</script>
+
+
+  </body>
+</html>
